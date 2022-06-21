@@ -997,9 +997,14 @@ export class Model {
                 }
             }
         }
-        if (params.hidden == true && rec[this.typeField] === undefined && !this.generic) {
-            rec[this.typeField] = this.name
-        }
+        // if (params.hidden == true && rec[this.typeField] === undefined && !this.generic) {
+        //     // HERE
+        //     // if(this.name == "QUESTION") {
+        //         // console.log('rec', rec)
+        //         // console.log('fields', Object.keys(this.block.fields))
+        //     // }
+        //     rec[this.typeField] = this.name
+        // }
         if (this.table.params.transform) {
             let opForTransform = TransformParseResponseAs[op]
             rec = this.table.params.transform(this, ReadWrite[opForTransform], rec, properties, params, raw)
